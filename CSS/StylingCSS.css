@@ -1,0 +1,976 @@
+ {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 
+   BODY 
+    */
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #3d281b;
+    line-height: 1.7;
+    min-height: 100vh;
+
+    background-color: #ead9b8;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(80, 45, 20, 0.025) 0px,
+            rgba(80, 45, 20, 0.025) 1px,
+            transparent 1px,
+            transparent 5px
+        );
+
+    animation: pageFade 1s ease;
+}
+
+
+/* 
+   ANIMATIONS
+    */
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes goldGlow {
+    0% {
+        text-shadow: 0 0 0 rgba(218, 171, 75, 0);
+    }
+
+    50% {
+        text-shadow:
+            0 0 8px rgba(218, 171, 75, 0.45);
+    }
+
+    100% {
+        text-shadow: 0 0 0 rgba(218, 171, 75, 0);
+    }
+}
+
+@keyframes imageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gentlePulse {
+    0% {
+        box-shadow:
+            0 0 0 rgba(181, 138, 69, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 15px rgba(181, 138, 69, 0.22);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 rgba(181, 138, 69, 0);
+    }
+}
+
+
+/* 
+   HEADER
+    */
+
+header {
+    background:
+        linear-gradient(
+            135deg,
+            #382014,
+            #5a351f,
+            #3b2417
+        );
+
+    border-bottom: 5px solid #b58a45;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.35);
+
+    animation: slideDown 1s ease;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* 
+   NAVIGATION
+   */
+
+nav {
+    min-height: 165px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px 20px;
+
+    gap: 10px;
+}
+
+
+/* 
+   LOGO
+  */
+
+nav img {
+    display: block;
+
+    width: auto;
+
+    height: 75px;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+
+    animation:
+        fadeIn 1.2s ease,
+        float 4s ease-in-out infinite;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+nav img:hover {
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(218, 171, 75, 0.6)
+        );
+}
+
+
+/* 
+   NAVIGATION LINKS
+   */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 3px;
+
+    width: 100%;
+
+    animation: slideUp 1s ease 0.2s both;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a,
+nav ul > a {
+    display: inline-block;
+
+    color: #f1c75b;
+
+    text-decoration: none;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    padding: 9px 12px;
+
+    border: 1px solid transparent;
+
+    transition:
+        all 0.35s ease;
+}
+
+nav ul li a:hover,
+nav ul > a:hover {
+    color: #fff4ce;
+
+    background:
+        rgba(181, 138, 69, 0.25);
+
+    border-color: #b58a45;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.25);
+
+    animation: goldGlow 1.5s infinite;
+}
+
+
+/* 
+   MAIN
+   */
+
+main {
+    width: 92%;
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    padding: 55px 20px 70px;
+
+    animation:
+        slideUp 1s ease 0.2s both;
+}
+
+
+/* 
+   HEADINGS
+    */
+
+main h1,
+main h2,
+main h3 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #4b2b19;
+}
+
+main h1 {
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 35px;
+
+    animation:
+        fadeIn 1s ease,
+        goldGlow 5s ease-in-out infinite;
+}
+
+main h2 {
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+
+    animation:
+        fadeIn 1s ease;
+}
+
+main h3 {
+    font-size: 30px;
+
+    margin: 45px 0 22px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #b58a45;
+
+    animation: slideUp 0.8s ease;
+
+    transition:
+        text-shadow 0.3s ease;
+}
+
+main h3:hover {
+    text-shadow:
+        0 0 10px rgba(181, 138, 69, 0.4);
+}
+
+main h3::after {
+    content: " ✦";
+
+    color: #b58a45;
+
+    font-size: 19px;
+
+    animation:
+        float 3s ease-in-out infinite;
+}
+
+
+/* 
+   VINTAGE NEWSPAPERPARAGRAPHS
+   */
+
+main p {
+    max-width: 1050px;
+
+    margin: 0 auto 30px;
+
+    padding: 25px 32px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    text-align: justify;
+
+    color: #463126;
+
+    background-color: #fff8e8;
+
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            rgba(80, 45, 20, 0.018) 0px,
+            rgba(80, 45, 20, 0.018) 1px,
+            transparent 1px,
+            transparent 6px
+        );
+
+    border-left: 5px solid #b58a45;
+
+    border-right: 1px solid
+        rgba(181, 138, 69, 0.5);
+
+    box-shadow:
+        0 6px 17px
+        rgba(55, 32, 18, 0.14);
+
+    animation:
+        imageAppear 1s ease;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+main p:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 23px
+        rgba(55, 32, 18, 0.20);
+}
+
+main p::first-letter {
+    font-size: 43px;
+
+    font-weight: bold;
+
+    color: #8a5d2e;
+
+    float: left;
+
+    line-height: 0.85;
+
+    padding-right: 8px;
+
+    padding-top: 4px;
+
+    text-shadow:
+        1px 1px 0 #d5ad68;
+}
+
+
+/* 
+   PRODUCT DETAILS
+   */
+
+main img[width="300"] {
+    display: block;
+
+    width: 300px;
+
+    height: 250px;
+
+    margin: 30px auto 20px;
+
+    object-fit: cover;
+
+    border: 6px solid #fff8e8;
+
+    outline: 2px solid #b58a45;
+
+    box-shadow:
+        0 8px 20px
+        rgba(55, 32, 18, 0.30);
+
+    animation:
+        imageAppear 0.9s ease;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease,
+        box-shadow 0.5s ease,
+        outline-color 0.5s ease;
+}
+
+
+/*  HOVER EFFECT
+   */
+
+main img[width="300"]:hover {
+    transform:
+        translateY(-8px)
+        scale(1.035);
+
+    filter:
+        sepia(30%)
+        saturate(78%)
+        contrast(92%)
+        brightness(88%);
+
+    outline-color: #d5ad68;
+
+    box-shadow:
+        0 15px 30px
+        rgba(45, 25, 12, 0.40),
+
+        0 0 15px
+        rgba(181, 138, 69, 0.28);
+}
+
+main h5 {
+    max-width: 650px;
+
+    margin: 3px auto;
+
+    padding: 4px 12px;
+
+    color: #51321f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+    text-align: center;
+
+    background:
+        rgba(255, 248, 232, 0.72);
+
+    border-bottom: 1px solid
+        rgba(181, 138, 69, 0.35);
+
+    transition:
+        background 0.3s ease,
+        padding 0.3s ease;
+}
+
+main h5:hover {
+    background:
+        rgba(181, 138, 69, 0.15);
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+}
+
+main img[width="300"] + p {
+    max-width: 650px;
+
+    margin:
+        0 auto 45px;
+
+    padding:
+        15px 25px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 245, 232, 0.88);
+
+    border:
+        1px solid #b58a45;
+
+    border-top:
+        4px solid #5b351f;
+
+    box-shadow:
+        0 5px 15px
+        rgba(55, 32, 18, 0.12);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+main img[width="300"] + p:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(55, 32, 18, 0.20),
+
+        0 0 12px
+        rgba(181, 138, 69, 0.15);
+}
+
+
+/*
+   NEW ARRIVALS & LIMITED EDITION
+    */
+
+main h3 ~ img[width="300"] {
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   LARGE IMAGES
+   ========================================================= */
+
+main img[width="1333"],
+main img[width="1334"] {
+    display: block;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    margin: 30px auto 45px;
+
+    border: 8px solid #3d2416;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.28);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+main img[width="1333"]:hover,
+main img[width="1334"]:hover {
+    transform: scale(1.015);
+
+    filter:
+        sepia(20%)
+        saturate(85%)
+        brightness(90%);
+
+    box-shadow:
+        0 15px 30px
+        rgba(45, 25, 12, 0.35),
+
+        0 0 15px
+        rgba(181, 138, 69, 0.22);
+}
+
+
+/* 
+   GENERAL LINKS
+    */
+
+main a {
+    color: #7a4b23;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+main a:hover {
+    color: #fff8e8;
+
+    background-color: #5b351f;
+}
+
+main p > a {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    margin: 10px 5px;
+
+    background-color: #5b351f;
+
+    color: #f1c75b;
+
+    border: 2px solid #b58a45;
+
+    box-shadow:
+        4px 4px 0 #2e1a10;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+main p > a:hover {
+    background-color: #8a5d2e;
+
+    transform:
+        translate(-3px, -3px);
+
+    box-shadow:
+        7px 7px 0 #2e1a10,
+
+        0 0 15px
+        rgba(181, 138, 69, 0.30);
+}
+
+
+/* 
+   CONTACT PAGE
+    */
+
+main h6 {
+    color: #5b351f;
+
+    font-size: 19px;
+
+    margin: 20px 0 5px;
+
+    border-bottom:
+        1px solid #b58a45;
+
+    padding-bottom: 5px;
+}
+
+
+/* 
+   FAQ
+   */
+
+main h3 + h6 {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin:
+        0 auto 30px;
+
+    border-bottom: none;
+
+    color: #7a4b23;
+
+    font-size: 18px;
+}
+
+
+/* 
+   VIDEO
+   */
+
+video {
+    display: block;
+
+    width: 1000px;
+
+    height: 500px;
+
+    margin: 30px auto;
+
+    border: 6px solid #3d2416;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+video:hover {
+    transform:
+        translateY(-6px)
+        scale(1.02);
+
+    box-shadow:
+        0 15px 28px
+        rgba(45, 25, 12, 0.38),
+
+        0 0 14px
+        rgba(181, 138, 69, 0.25);
+}
+
+
+/*
+   FOOTER
+   */
+
+footer {
+    padding: 28px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #382014,
+            #5a351f,
+            #3b2417
+        );
+
+    color: #e8d1a0;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    border-top:
+        5px solid #b58a45;
+
+    box-shadow:
+        0 -5px 15px
+        rgba(0, 0, 0, 0.2);
+}
+
+main::before {
+    content: "THE VINYL STOEP";
+
+    display: block;
+
+    text-align: center;
+
+    color:
+        rgba(91, 53, 31, 0.45);
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    animation:
+        fadeIn 1.5s ease;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eadabd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5b351f;
+
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8a5d2e;
+}
+
+::selection {
+    background: #b58a45;
+
+    color: #2f1b10;
+}
+
+
+/* 
+   MOBILE RESPONSIVENESS
+    */
+
+@media (max-width: 900px) {
+
+    nav ul {
+        gap: 2px;
+    }
+
+    nav ul li a,
+    nav ul > a {
+        font-size: 13px;
+
+        padding: 7px 8px;
+    }
+
+    main {
+        width: 96%;
+
+        padding:
+            40px 10px 50px;
+    }
+
+    main h1 {
+        font-size: 40px;
+    }
+
+    main h2 {
+        font-size: 34px;
+    }
+
+    main h3 {
+        font-size: 26px;
+    }
+
+    main p {
+        padding: 20px;
+
+        font-size: 16px;
+    }
+
+    main img[width="300"] {
+        width: 280px;
+
+        height: 235px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        min-height: 190px;
+    }
+
+    nav img {
+        height: 65px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a,
+    nav ul > a {
+        font-size: 14px;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 34px;
+    }
+
+    main h2 {
+        font-size: 30px;
+    }
+
+    main h3 {
+        font-size: 24px;
+    }
+
+    main p {
+        font-size: 15px;
+
+        text-align: left;
+
+        padding: 18px;
+    }
+
+    main img[width="300"] {
+        width: 90%;
+
+        max-width: 300px;
+
+        height: auto;
+
+        aspect-ratio: 300 / 250;
+    }
+}
