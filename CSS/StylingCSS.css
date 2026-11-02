@@ -609,10 +609,6 @@ main h3 ~ img[width="300"] {
 }
 
 
-/* =========================================================
-   LARGE IMAGES
-   ========================================================= */
-
 main img[width="1333"],
 main img[width="1334"] {
     display: block;
@@ -972,5 +968,982 @@ main::before {
         height: auto;
 
         aspect-ratio: 300 / 250;
+    }
+}
+
+
+
+/* Inquiry form container */
+#inquiryForm {
+max-width: 750px;
+margin: 40px auto;
+padding: 35px;
+
+background-color: #fff8e8;
+
+border-left: 5px solid #b58a45;
+border-right: 1px solid rgba(181, 138, 69, 0.5);
+
+box-shadow:
+    0 8px 20px rgba(55, 32, 18, 0.18);
+
+animation: imageAppear 0.8s ease;
+
+}
+
+/* Form labels */
+#inquiryForm label {
+display: block;
+
+margin-bottom: 8px;
+
+color: #5b351f;
+
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: 17px;
+
+font-weight: bold;
+
+}
+
+/* Text inputs, email inputs and dropdown menu */
+#inquiryForm input,
+#inquiryForm select,
+#inquiryForm textarea {
+width: 100%;
+
+padding: 12px 15px;
+
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: 16px;
+
+color: #3d281b;
+
+background-color: #fffdf5;
+
+border: 1px solid #b58a45;
+
+outline: none;
+
+box-sizing: border-box;
+
+transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
+}
+
+/* Text area */
+#inquiryForm textarea {
+resize: vertical;
+
+min-height: 150px;
+
+}
+
+/* Input focus effect */
+#inquiryForm input,
+#inquiryForm select,
+#inquiryForm textarea {
+border-color: #8a5d2e;
+
+box-shadow:
+    0 0 10px rgba(181, 138, 69, 0.35);
+
+transform: translateY(-2px);
+
+}
+
+/* Placeholder text */
+#inquiryForm input::placeholder,
+#inquiryForm textarea::placeholder {
+color: #9b8068;
+
+font-style: italic;
+
+}
+
+/* Submit button */
+#inquiryForm button {
+display: block;
+
+width: 100%;
+
+padding: 14px 25px;
+
+margin-top: 10px;
+
+background-color: #5b351f;
+
+color: #f1c75b;
+
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: 17px;
+
+font-weight: bold;
+
+letter-spacing: 1px;
+
+border: 2px solid #b58a45;
+
+cursor: pointer;
+
+box-shadow:
+    4px 4px 0 #2e1a10;
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+
+}
+
+/* Submit button hover effect */
+#inquiryForm button {
+background-color: #8a5d2e;
+
+transform: translate(-3px, -3px);
+
+box-shadow:
+    7px 7px 0 #2e1a10,
+    0 0 15px rgba(181, 138, 69, 0.3);
+
+}
+
+/* Submit button when clicked */
+#inquiryForm button {
+transform: translate(1px, 1px);
+
+box-shadow:
+    2px 2px 0 #2e1a10;
+
+}
+
+/* Form success or error message */
+#formMessage {
+max-width: 750px;
+
+margin: 20px auto;
+
+padding: 15px 20px;
+
+text-align: center;
+
+font-weight: bold;
+
+color: #5b351f;
+
+background-color: rgba(255, 248, 232, 0.9);
+
+border: 1px solid #b58a45;
+
+}
+
+
+@media (max-width: 600px) {
+
+#inquiryForm {
+    margin: 25px auto;
+
+    padding: 25px 20px;
+}
+
+#inquiryForm input,
+#inquiryForm select,
+#inquiryForm textarea {
+    font-size: 16px;
+}
+
+#inquiryForm button {
+    font-size: 16px;
+}
+
+}
+
+
+
+#searchInput {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 18px;
+    margin: 15px 0 30px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #8b4513;
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.4);
+}
+
+
+
+.cart-button-container {
+    text-align: right;
+    margin: 20px;
+}
+
+#viewCartButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #5c2e0d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#viewCartButton:hover {
+    background-color: #8b4513;
+    transform: scale(1.05);
+}
+
+
+
+#shoppingCart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    max-width: 90%;
+    height: 100%;
+    background-color: white;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+
+#shoppingCart.show-cart {
+    display: block;
+}
+
+
+/* Cart heading and close button */
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.cart-header h2 {
+    margin: 0;
+}
+
+#closeCartButton {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Cart items */
+
+#cartItems div {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#cartItems button {
+    padding: 6px 10px;
+    margin-left: 10px;
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Payment  */
+
+#paymentMethod {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Cart action buttons */
+
+.cart-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#clearCartButton,
+#checkoutButton {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#clearCartButton {
+    background-color: #a52a2a;
+}
+
+#checkoutButton {
+    background-color: #5c2e0d;
+}
+
+#clearCartButton:hover,
+#checkoutButton:hover {
+    opacity: 0.85;
+}
+
+
+
+.product button {
+    background-color: #5c2e0d;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+/* When the user hovers over the button */
+
+.product button:hover {
+    background-color: #8b4513;
+    transform: scale(1.05);
+}
+
+/* When the user clicks the button */
+
+.product button:active {
+    transform: scale(0.98);
+}
+
+
+
+#newArrivals {
+    margin: 40px 0;
+    text-align: center;
+}
+
+
+/* GENRE FILTER BUTTONS */
+
+.genre-filters {
+    margin: 20px 0;
+}
+
+.genre-filters button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #5c2e0d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.genre-filters button:hover {
+    background-color: #8b4513;
+    transform: scale(1.05);
+}
+
+
+/* SLIDESHOW */
+
+.new-arrivals-slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.arrival-slide {
+    display: none;
+    position: relative;
+}
+
+.arrival-slide img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.arrival-slide img:hover {
+    transform: scale(1.03);
+}
+
+
+/* NEW BADGE */
+
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #a52a2a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+
+/* SLIDESHOW BUTTONS */
+
+.slide-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: #5c2e0d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slide-button:hover {
+    background-color: #8b4513;
+}
+
+
+
+
+.quick-view-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+}
+
+.quick-view-content {
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+    max-height: 90vh;
+
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 10px;
+    text-align: center;
+
+    overflow-y: auto;
+}
+
+.quick-view-content img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    background: none;
+    border: none;
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* ADD TO CART BUTTON IN QUICK VIEW */
+
+#quickViewDetails button {
+    background-color: #5c2e0d;
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 12px 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#quickViewDetails button:hover {
+    background-color: #8b4513;
+}
+
+/* Make the image look clickable */
+
+#vinylLogo {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#vinylLogo:hover {
+    transform: scale(1.05);
+}
+
+
+.vinyl-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 20%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+}
+
+
+.vinyl-popup-content {
+    position: relative;
+
+    width: 400px;
+    max-width: 85%;
+
+    padding: 30px;
+
+    background-color: white;
+
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+
+/* CLOSE BUTTON */
+
+#closePopup {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* EXPLORE COLLECTION LINK */
+
+.vinyl-popup-content a {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 12px 20px;
+
+    background-color: #5c2e0d;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.vinyl-popup-content a:hover {
+    background-color: #8b4513;
+}
+
+
+
+.faq-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+/* Question button */
+
+.faq-question {
+    width: 100%;
+    padding: 15px 20px;
+
+    background-color: #5c2e0d;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    text-align: left;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #8b4513;
+}
+
+/* Answer - hidden until the question is clicked */
+
+.faq-answer {
+    display: none;
+
+    padding: 15px 20px;
+
+    background-color: white;
+    color: #333;
+
+    border: 1px solid #ddd;
+    border-top: none;
+
+    border-radius: 0 0 6px 6px;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+
+#topButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    display: none;
+
+    background-color: #5c2e0d;
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    width: 70px;
+    height: 55px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+
+/* Hover effect */
+
+#topButton:hover {
+    background-color: #8b4513;
+    transform: translateY(-5px);
+}
+
+
+/* Click effect */
+
+#topButton:active {
+    transform: scale(0.95);
+}
+
+
+
+
+.home-search {
+    text-align: center;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 800px;
+}
+
+.home-search h2 {
+    margin-bottom: 15px;
+}
+
+#homeSearchInput {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 18px;
+
+    font-size: 16px;
+
+    border: 2px solid #5c2e0d;
+    border-radius: 25px;
+
+    outline: none;
+}
+
+#homeSearchInput:focus {
+    border-color: #8b4513;
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
+}
+
+.home-search button {
+    padding: 12px 22px;
+    margin-left: 8px;
+
+    background-color: #5c2e0d;
+    color: white;
+
+    border: none;
+    border-radius: 25px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-search button:hover {
+    background-color: #8b4513;
+    transform: scale(1.05);
+}
+
+
+/* SEARCH RESULTS */
+
+#searchResults {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.search-result {
+    margin: 15px;
+    padding: 15px;
+
+    background-color: white;
+
+    border-left: 4px solid #5c2e0d;
+    border-radius: 5px;
+}
+
+.search-result img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+.gallery-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+
+/* Dark background behind the large image */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3000;
+}
+
+
+/* Large image */
+
+#lightboxImage {
+    max-width: 90%;
+    max-height: 85%;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Close button */
+
+.close-lightbox {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    background: none;
+    color: white;
+
+    border: none;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-lightbox:hover {
+    transform: scale(1.2);
+}
+
+
+/
+
+/* Gallery image hover animation */
+.gallery-image {
+    cursor: zoom-in;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark background overlay */
+.image-popup {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+    cursor: zoom-out;
+
+    opacity: 0;
+    animation: fadeIn 0.35s ease forwards;
+}
+
+/* Expanded image */
+.image-popup img {
+    max-width: 85%;
+    max-height: 85vh;
+    object-fit: contain;
+
+    border: 3px solid white;
+    border-radius: 8px;
+
+    animation: zoomIn 0.4s ease forwards;
+    cursor: default;
+}
+
+/* Close button */
+.close-popup {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    background: transparent;
+    color: white;
+    border: none;
+
+    font-size: 45px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-popup:hover {
+    transform: rotate(90deg) scale(1.2);
+    color: #d4af37;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .image-popup img {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .close-popup {
+        top: 10px;
+        right: 15px;
     }
 }
