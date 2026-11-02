@@ -644,3 +644,131 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+// ===================================
+// CONTACT US PAGE JAVASCRIPT
+// ===================================
+
+
+// 1. BACK TO TOP BUTTON
+
+const topButton = document.getElementById("topButton");
+
+// Show button when visitor scrolls down
+
+window.addEventListener("scroll", function () {
+
+    if (topButton) {
+
+        if (window.scrollY > 300) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+
+    }
+
+});
+
+
+// Scroll smoothly to the top
+
+function scrollToTop() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+// 2. EMAIL CONFIRMATION
+
+const emailLink = document.querySelector('a[href^="mailto:"]');
+
+if (emailLink) {
+
+    emailLink.addEventListener("click", function () {
+
+        alert("Thank you for contacting The Vinyl Stoep! Your email application will open shortly.");
+
+    });
+
+}
+
+
+// 3. PHONE CONFIRMATION
+
+const phoneLink = document.querySelector('a[href^="tel:"]');
+
+if (phoneLink) {
+
+    phoneLink.addEventListener("click", function () {
+
+        alert("You are about to contact The Vinyl Stoep.");
+
+    });
+
+}
+
+
+// 4. CURRENT STORE STATUS
+
+function updateStoreStatus() {
+
+    const statusElement = document.getElementById("storeStatus");
+
+    if (!statusElement) return;
+
+    const now = new Date();
+
+    // South African local time
+    const localTime = new Date(
+        now.toLocaleString("en-US", {
+            timeZone: "Africa/Johannesburg"
+        })
+    );
+
+    const day = localTime.getDay();
+
+    const currentMinutes =
+        localTime.getHours() * 60 + localTime.getMinutes();
+
+    let openingTime;
+    let closingTime;
+
+    // Monday to Friday: 10:00 - 16:00
+    if (day >= 1 && day <= 5) {
+        openingTime = 10 * 60;
+        closingTime = 16 * 60;
+    }
+
+    // Saturday: 10:00 - 15:00
+    else if (day === 6) {
+        openingTime = 10 * 60;
+        closingTime = 15 * 60;
+    }
+
+    // Sunday: 10:00 - 14:00
+    else {
+        openingTime = 10 * 60;
+        closingTime = 14 * 60;
+    }
+
+    if (
+        currentMinutes >= openingTime &&
+        currentMinutes < closingTime
+    ) {
+        statusElement.textContent = "We are currently OPEN";
+        statusElement.style.color = "green";
+    } else {
+        statusElement.textContent = "We are currently CLOSED";
+        statusElement.style.color = "red";
+    }
+
+}
+
+updateStoreStatus();
