@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
      <link rel="stylesheet" href="CSS/StylingCSS.css">
+      <script src="JavaScript/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -24,8 +24,8 @@
   <li><a href="ContactUs.html"> Contact Us| </a>  </li>
    <li><a  href="FrequentlyAskQuestions.html"> Frequently Asked Questions|  </a>  </li>
    <li><a href="Gallery.html"> Gallery| </a>   </li>
-   <li><a href="ProductDetails.html"> Product Details </a>  </li>
-      
+   <li><a href="ProductDetails.html"> Product Details| </a>  </li>
+      <li><a href="Inquiry.html"> Inquiry </a>  </li>
 
 </ul>
  
@@ -33,92 +33,351 @@
     
     </header>
     <main>
-      
+   
+<div class="cart-button-container">
+
+    <button id="viewCartButton" onclick="toggleCart()">
+         View Cart (<span id="cartCount">0</span>)
+    </button>
+
+</div>
+
+
+
+<section id="shoppingCart">
+
+    <div class="cart-header">
+        <h2>Your Shopping Cart</h2>
+
+        <button id="closeCartButton" onclick="toggleCart()">
+            ×
+        </button>
+    </div>
+
+    <div id="cartItems">
+        
+    </div>
+
+    <h3>
+        Total: <span id="cartTotal">R0.00</span>
+    </h3>
+
+    <label for="paymentMethod">Payment Method:</label>
+
+    <select id="paymentMethod">
+        <option value="">Select a payment method</option>
+        <option value="card">Debit / Credit Card</option>
+        <option value="eft">EFT / Bank Transfer</option>
+        <option value="cash">Cash on Collection</option>
+    </select>
+
+    <div class="cart-actions">
+
+        <button id="clearCartButton" onclick="clearCart()">
+            Clear Cart
+        </button>
+
+        <button id="checkoutButton" onclick="checkout()">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+</section>  
+ 
+
+
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search by artist, album or year..."
+    onkeyup="searchProducts()"
+>
+
+<section id="shoppingCart">
+
+    <div class="cart-header">
+        <h2>Your Shopping Cart</h2>
+
+        <button id="closeCartButton" onclick="toggleCart()">
+            ×
+        </button>
+    </div>
+
+    <div id="cartItems">
+       
+    </div>
+
+    <h3>
+        Total: <span id="cartTotal">R0.00</span>
+    </h3>
+
+    <label for="paymentMethod">Payment Method:</label>
+
+    <select id="paymentMethod">
+        <option value="">Select a payment method</option>
+        <option value="card">Debit / Credit Card</option>
+        <option value="eft">EFT / Bank Transfer</option>
+        <option value="cash">Cash on Collection</option>
+    </select>
+
+    <div class="cart-actions">
+
+        <button id="clearCartButton" onclick="clearCart()">
+            Clear Cart
+        </button>
+
+        <button id="checkoutButton" onclick="checkout()">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+</section>
+ 
  
  <h3>Featured Artists</h3>
- <p>We are proud to feature a diverse range of artists from South Africa and around the world. Our collection includes classic records, new releases, and rare finds that cater to all music enthusiasts. Explore our featured artists and discover the sounds that define our musical heritage.</p>
- 
- <img src="Images/Patapata.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
- <h5>Artist: Miriam Makeba</h5>
-<h5>Album:Pata Pata</h5>
-<h5>Release Year: 1967</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R150.00</h5>
- <p></p>
 
- <img src="Images/Rebeca.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <h5>Artist: Rebeca Malope</h5>
-<h5>Album:Ama VIP</h5>
-<h5>Release Year:2014</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R200.00</h5>
+<p>
+    We are proud to feature a diverse range of artists from South Africa
+    and around the world. Our collection includes classic records, new
+    releases, and rare finds that cater to all music enthusiasts.
+    Explore our featured artists and discover the sounds that define
+    our musical heritage.
+</p>
 
-<p> </p>
 
- <img src="Images/Masikela.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <h5>Artist: Hugh Masekela</h5>
-<h5>Album: Hope</h5>
-<h5>Release Year: 1994</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R180.00</h5>
-<p></p>
 
- <img src="Images/dearmomma.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
-  <h5>Artist: Tupac Shakur</h5>
-<h5>Album: Me Against the World</h5>
-<h5>Release Year: 1995</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R220.00</h5>
-<p></p>
+<div class="product">
 
- <img src="Images/Njelic.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <h5>Artist: Kabelo Motha</h5>
-<h5>Album:Piano Hub</h5>
-<h5>Release Year:2019</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R180.00</h5>
-<p></p>
+    <img src="Images/Patapata.jpg"
+         alt="Miriam Makeba - Pata Pata"
+         width="300"
+         height="250">
 
-<img src="Images/lira.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
-  <h5>Artist: Lira</h5>
-<h5>Album:Feel Good</h5>
-<h5>Release Year:2010</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R150.00</h5>
-<p></p>
+    <h5>Artist: Miriam Makeba</h5>
+    <h5>Album: Pata Pata</h5>
+    <h5>Release Year: 1967</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R150.00</h5>
 
-<img src="Images/Sjava.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <h5>Artist: Sjava</h5>
-<h5>Album:Isina Muva</h5>
-<h5>Release Year:2016</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R200.00</h5>
-<p></p>
+    <button onclick="addToCart('Miriam Makeba - Pata Pata', 150)">
+        Add to Cart
+    </button>
 
-<img src="Images/gpgang.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
-  <h5>Artist: GP Gangstar</h5>
-<h5>Album:Jugdement Day</h5>
-<h5>Release Year:2012</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R250.00</h5>
-<p></p>
+</div>
 
-<img src="Images/Mandoza.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <h5>Artist: Mandoza</h5>
-<h5>Album: Nkalakatha</h5>
-<h5>Release Year:2009</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R380.00</h5>
-<p></p>
 
-<img src="Images/Hotstick.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
-  <h5>Artist: Sipho Mbuse</h5>
-<h5>Album:Piano Hub</h5>
-<h5>Release Year:2010</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R400.00</h5>
-<p></p>
-<img src="Images/image77.png" alt="The Vinyl Stoep Logo" width="300" height="250">
+
+<div class="product">
+
+    <img src="Images/Rebeca.jpg"
+         alt="Rebeca Malope - Ama VIP"
+         width="300"
+         height="250">
+
+    <h5>Artist: Rebeca Malope</h5>
+    <h5>Album: Ama VIP</h5>
+    <h5>Release Year: 2014</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R200.00</h5>
+
+    <button onclick="addToCart('Rebeca Malope - Ama VIP', 200)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+
+<div class="product">
+
+    <img src="Images/Masikela.jpg"
+         alt="Hugh Masekela - Hope"
+         width="300"
+         height="250">
+
+    <h5>Artist: Hugh Masekela</h5>
+    <h5>Album: Hope</h5>
+    <h5>Release Year: 1994</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R180.00</h5>
+
+    <button onclick="addToCart('Hugh Masekela - Hope', 180)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+
+<div class="product">
+
+    <img src="Images/dearmomma.jpg"
+         alt="Tupac Shakur - Me Against the World"
+         width="300"
+         height="250">
+
+    <h5>Artist: Tupac Shakur</h5>
+    <h5>Album: Me Against the World</h5>
+    <h5>Release Year: 1995</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R220.00</h5>
+
+    <button onclick="addToCart('Tupac Shakur - Me Against the World', 220)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+
+<div class="product">
+
+    <img src="Images/Njelic.jpg"
+         alt="Kabelo Motha - Piano Hub"
+         width="300"
+         height="250">
+
+    <h5>Artist: Kabelo Motha</h5>
+    <h5>Album: Piano Hub</h5>
+    <h5>Release Year: 2019</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R180.00</h5>
+
+    <button onclick="addToCart('Kabelo Motha - Piano Hub', 180)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product">
+
+    <img src="Images/lira.jpg"
+         alt="Lira - Feel Good"
+         width="300"
+         height="250">
+
+    <h5>Artist: Lira</h5>
+    <h5>Album: Feel Good</h5>
+    <h5>Release Year: 2010</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R150.00</h5>
+
+    <button onclick="addToCart('Lira - Feel Good', 150)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+<div class="product">
+
+    <img src="Images/Sjava.jpg"
+         alt="Sjava - Isina Muva"
+         width="300"
+         height="250">
+
+    <h5>Artist: Sjava</h5>
+    <h5>Album: Isina Muva</h5>
+    <h5>Release Year: 2016</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R200.00</h5>
+
+    <button onclick="addToCart('Sjava - Isina Muva', 200)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+
+<div class="product">
+
+    <img src="Images/gpgang.jpg"
+         alt="GP Gangstar - Judgement Day"
+         width="300"
+         height="250">
+
+    <h5>Artist: GP Gangstar</h5>
+    <h5>Album: Judgement Day</h5>
+    <h5>Release Year: 2012</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R250.00</h5>
+
+    <button onclick="addToCart('GP Gangstar - Judgement Day', 250)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+
+<div class="product">
+
+    <img src="Images/Mandoza.jpg"
+         alt="Mandoza - Nkalakatha"
+         width="300"
+         height="250">
+
+    <h5>Artist: Mandoza</h5>
+    <h5>Album: Nkalakatha</h5>
+    <h5>Release Year: 2009</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R380.00</h5>
+
+    <button onclick="addToCart('Mandoza - Nkalakatha', 380)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+
+<div class="product">
+
+    <img src="Images/Hotstick.jpg"
+         alt="Sipho Mbuse - Piano Hub"
+         width="300"
+         height="250">
+
+    <h5>Artist: Sipho Mbuse</h5>
+    <h5>Album: Piano Hub</h5>
+    <h5>Release Year: 2010</h5>
+    <h5>Condition: Good</h5>
+    <h5>Price: R400.00</h5>
+
+    <button onclick="addToCart('Sipho Mbuse - Piano Hub', 400)">
+        Add to Cart
+    </button>
+
+</div>
+
+
+<!-- POP-UP -->
+<div id="vinylPopup" class="vinyl-popup">
+
+    <div class="vinyl-popup-content">
+
+        <button id="closePopup">
+            ×
+        </button>
+
+        <h2>Welcome to The Vinyl Stoep!</h2>
+
+        <p>
+            Where music lives on. Explore timeless classics,
+            hidden gems and records that defined generations.
+        </p>
+
+        <a href="index.html">
+            Explore Our Collection
+        </a>
+
+    </div>
+
+</div>
 
 <p>Where South African music lives on. From timeless classics to hidden gems,
  we bring music lovers closer to the records that defined generations. </p>
@@ -126,158 +385,159 @@
 
 
 <h3>New Arrivals</h3>
-<img src="Images/nathi.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/Lewi.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/dancing.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/lundi.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
+<!-- =========================================
+     NEW ARRIVALS
+========================================= -->
 
-<h3>Limited Edition</h3>
-<img src="Images/beatles.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/jealous.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/seasons.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/twofus.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<br>
+<section id="newArrivals">
+
+   
+    <!-- GENRE -->
+    <div class="genre-filters">
+
+        <button onclick="filterNewArrivals('all')">
+            All
+        </button>
+
+        <button onclick="filterNewArrivals('hip-hop')">
+            Hip-Hop
+        </button>
+
+        <button onclick="filterNewArrivals('afro-pop')">
+            Afro-pop
+        </button>
+
+        <button onclick="filterNewArrivals('jazz')">
+            Jazz
+        </button>
+
+        <button onclick="filterNewArrivals('rnb')">
+            R&B
+        </button>
+
+    </div>
+
+
+    <!-- SLIDESHOW -->
+    <div class="new-arrivals-slideshow">
+
+        <button class="slide-button" onclick="previousArrival()">
+            ← Previous
+        </button>
+
+
+        <!-- NEW ARRIVAL  -->
+        <div class="arrival-slide"
+             data-genre="afro-pop"
+             data-artist="Nathi"
+             data-album="New Arrival Album"
+             data-year="2026"
+             data-price="250"
+             data-condition="New">
+
+            <span class="new-badge">NEW</span>
+
+            <img src="Images/nathi.jpg"
+                 alt="Nathi album cover"
+                 onclick="openQuickView(0)">
+
+        </div>
+
+
+        <!-- NEW ARRIVAL 2 -->
+        <div class="arrival-slide"
+             data-genre="rnb"
+             data-artist="Artist Name"
+             data-album="New R&B Album"
+             data-year="2026"
+             data-price="280"
+             data-condition="New">
+
+            <span class="new-badge">NEW</span>
+
+            <img src="Images/Lewi.jpg"
+                 alt="New R&B album cover"
+                 onclick="openQuickView(1)">
+
+        </div>
+
+
+        <!-- NEW ARRIVAL 3 -->
+        <div class="arrival-slide"
+             data-genre="jazz"
+             data-artist="Artist Name"
+             data-album="New Jazz Album"
+             data-year="2026"
+             data-price="300"
+             data-condition="New">
+
+            <span class="new-badge">NEW</span>
+
+            <img src="Images/dancing.jpg"
+                 alt="New Jazz album cover"
+                 onclick="openQuickView(2)">
+
+        </div>
+
+
+        <!-- NEW ARRIVAL 4 -->
+        <div class="arrival-slide"
+             data-genre="hip-hop"
+             data-artist="Artist Name"
+             data-album="New Hip-Hop Album"
+             data-year="2026"
+             data-price="270"
+             data-condition="New">
+
+            <span class="new-badge">NEW</span>
+
+            <img src="Images/dearmomma.jpg"
+                 alt="New Hip-Hop album cover"
+                 onclick="openQuickView(3)">
+
+        </div>
+
+
+        <button class="slide-button" onclick="nextArrival()">
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<div id="quickViewModal" class="quick-view-modal">
+
+    <div class="quick-view-content">
+
+        <button class="close-modal" onclick="closeQuickView()">
+            ×
+        </button>
+
+        <div id="quickViewDetails">
+            <!-- JavaScript adds product details here -->
+        </div>
+
+    </div>
+
+</div>
 
 <p>
     Want to explore more? Head back to our home page.
 <br>
 <a href="Index.html">Home</a>
-</p></main>
+</p>
+<button
+    id="topButton"
+    onclick="scrollToTop()"
+    style="display: none;"
+>
+    Back to Top
+</button>
+</main>
 <footer>&copy;ST10521273|#DISD0601|All Rights Reserved</footer>
-
+<script src="JS/Script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-     <!---
-     Navigation bar starts here-->   
-    <nav>     
-        <center>
-            <img src="images/image1.png.png" alt="The Vinyl Stoep Logo" width="300" height="250">
-        </center>  
-<ul>
-<center> <a href="index.html"> Home| </a>   
-   <a href="About.html"> About Us|  </a>   
-  <a href="ContactUs.html"> Contact Us| </a>  
-   <a href="FrequentlyAskQuestions.html"> Frequently Asked Questions|  </a>  
-   <a href="Gallery.html"> Gallery| </a>   
-   <a href="ProductDetails.html"> Product Details </a>  
-   </center>  
-
-</ul>
-
- <style>body{background-color:chocolate}</style>
-    </nav>
-    
-    </header>
-    <main> </h1>
- <h3>Featured Artists</h3>
- <p>We are proud to feature a diverse range of artists from South Africa and around the world. Our collection includes classic records, new releases, and rare finds that cater to all music enthusiasts. Explore our featured artists and discover the sounds that define our musical heritage.</p>
- <img src="Images/Patapata.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
- <p><h5>Artist: Miriam Makeba</h5>
-<h5>Album:Pata Pata</h5>
-<h5>Release Year: 1967</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R150.00</h5>
- </p>
- <img src="Images/Rebeca.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Rebeca Malope</h5>
-<h5>Album:Ama VIP</h5>
-<h5>Release Year:2014</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R200.00</h5>
-</p>
- <img src="Images/Masikela.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Hugh Masekela</h5>
-<h5>Album: Hope</h5>
-<h5>Release Year: 1994</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R180.00</h5>
-</p>
- <img src="Images/dearmomma.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Tupac Shakur</h5>
-<h5>Album: Me Against the World</h5>
-<h5>Release Year: 1995</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R220.00</h5>
-</p>
- <img src="Images/Njelic.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Kabelo Motha</h5>
-<h5>Album:Piano Hub</h5>
-<h5>Release Year:2019</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R180.00</h5>
-</p>
-
-<img src="Images/lira.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Lira</h5>
-<h5>Album:Feel Good</h5>
-<h5>Release Year:2010</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R150.00</h5>
-</p>
-
-<img src="Images/Sjava.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Sjava</h5>
-<h5>Album:Isina Muva</h5>
-<h5>Release Year:2016</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R200.00</h5>
-</p>
-
-<img src="Images/gpgang.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: GP Gangstar</h5>
-<h5>Album:Jugdement Day</h5>
-<h5>Release Year:2012</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R250.00</h5>
-</p>
-
-<img src="Images/Mandoza.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Mandoza</h5>
-<h5>Album: Nkalakatha</h5>
-<h5>Release Year:2009</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R380.00</h5>
-</p>
-
-<img src="Images/Hotstick.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">  
- <p> <h5>Artist: Sipho Mbuse</h5>
-<h5>Album:Piano Hub</h5>
-<h5>Release Year:2010</h5>
-<h5>Condition: Good</h5>
-<h5>Price: R400.00</h5>
-</p>
-<img src="Images/image77.png" alt="The Vinyl Stoep Logo" width="300" height="250">
-
-<p>Where South African music lives on. From timeless classics to hidden gems,
- we bring music lovers closer to the records that defined generations. </p>
-
-
-
-<h3>New Arrivals</h3>
-<img src="Images/nathi.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/Lewi.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/dancing.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/lundi.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-
-<h3>Limited Edition</h3>
-<img src="Images/beatles.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/jealous.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/seasons.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<img src="Images/twofus.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
-<br>
-<a href="About.html">Learn More About Us</a>
-</p></main>
-<footer>&copy;ST10521273|#DISD0601|All Rights Reserved</footer>
-
-</body>
->>>>>>> ef62f4891b4a6f77d5ba9ca592c2dd4c8afc76ea
 </html>
