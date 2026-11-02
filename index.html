@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="CSS/StylingCSS.css">
+     <script src="JavaScript/script.js" defer></script>
+   
 </head>
 <body>
     <header>
@@ -23,8 +24,8 @@
   <li><a href="ContactUs.html"> Contact Us| </a>  </li>
    <li><a href="FrequentlyAskQuestions.html"> Frequently Asked Questions|  </a>  </li>
    <li><a href="Gallery.html"> Gallery| </a>   </li>
-   <li><a href="ProductDetails.html"> Product Details </a>  </li>
-      
+   <li><a href="ProductDetails.html"> Product Details| </a>  </li>
+    <li><a href="Inquiry.html"> Inquiry </a>  </li>  
 
 </ul>
 
@@ -32,89 +33,9 @@
     </nav>
     
     </header>
-<main>     
-<h1>
-Welcome...
-
-</h1>
-
- <img src="images/Banner.png" alt="The Vinyl Stoep Logo" width="1333" height="500">
- <br>
- <h3>Our Featured Genres</h3>
- <img src="Images/image13.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/image15.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/image16.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/image17.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/image18.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/Bubblegum.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/jazzz.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/Afropop.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/image77.png" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<h3>Featured Albums by International Artists</h3>
-<img src="Images/Adele.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Boys.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/SlimShady.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Vandross.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/WhitneyHouston.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/kdot.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/jackson.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/weekend.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/image77.png" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<h3>Upcoming Events</h3>
-<img src="Images/Event1.jpeg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Event 2.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Event3.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/event4.jpeg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <h3>Upcoming Releases</h3>
-<img src="Images/Cole.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/keys.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Heyes.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Xagons.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <br> 
-<p>Where music lives on. From timeless classics to hidden gems,
- we bring music lovers closer to the records that defined generations.
-
-
- <a href="About.html">Learn More About Us</a>
-</p>
-</main>
-
-
-<footer>&copy;ST10521273|#DISD0601|All Rights Reserved</footer>
-
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-<body>
-    <header>
-     <!---
-     Navigation bar starts here-->   
-    <nav> 
-        <center>
-            <img src="images/image1.png.png" alt="The Vinyl Stoep Logo" width="300" height="250">
-        </center>   
-<ul>
-<center> <a href="index.html"> Home| </a>   
-   <a href="About.html"> About Us|  </a>   
-  <a href="ContactUs.html"> Contact Us| </a>  
-   <a href="FrequentlyAskQuestions.html"> Frequently Asked Questions|  </a>  
-   <a href="Gallery.html"> Gallery| </a>   
-   <a href="ProductDetails.html"> Product Details </a>  
-   </center>    
-
-</ul>
-
- <style>body{background-color:chocolate}</style>
-    </nav>
+<main>    
     
-    </header>
-<main>     
+    
 <h1>
 Welcome...
 
@@ -122,32 +43,298 @@ Welcome...
 
  <img src="images/Banner.png" alt="The Vinyl Stoep Logo" width="1333" height="500">
  <br>
+
+
+
+<section class="home-search">
+
+   
+
+    <input
+        type="text"
+        id="homeSearchInput"
+        placeholder="Search artists, genres, releases or events..."
+    >
+
+    <button onclick="searchHomePage()">
+        Search
+    </button>
+
+    <div id="searchResults"></div>
+
+</section>
+
+
+
  <h3>Our Featured Genres</h3>
- <img src="Images/image13.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/image15.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/image16.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/image17.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/image18.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/Bubblegum.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+
+
+
+<section class="featured-genres">
+
+   
+
+
+    <div class="searchable-item"
+         data-search="jazz featured genre music">
 <img src="Images/jazzz.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/Afropop.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/image77.png" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<h3>Featured Albums by International Artists</h3>
-<img src="Images/Adele.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Boys.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/SlimShady.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/Vandross.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/WhitneyHouston.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/kdot.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/jackson.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
- <img src="Images/weekend.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<img src="Images/image77.png" alt="The Vinyl Stoep Logo" width="300" height="250"> 
-<h3>Upcoming Events</h3>
-<img src="Images/Event1.jpeg" alt="The Vinyl Stoep Logo" width="300" height="350"> 
- <img src="Images/Event 2.jpg" alt="The Vinyl Stoep Logo" width="300" height="350"> 
- <img src="Images/Event3.jpg" alt="The Vinyl Stoep Logo" width="300" height="350"> 
- <img src="Images/event4.jpeg" alt="The Vinyl Stoep Logo" width="300" height="350"> 
- <h3>Upcoming Releases</h3>
+        <h3>Jazz</h3>
+
+    
+
+    </div>
+
+
+    <div class="searchable-item"
+         data-search="Kwaito  featured genre music">
+<img src="Images/image15.jpg" alt="The Vinyl Stoep Logo" width="300" height="250">
+        <h3>Kwaito</h3>
+
+       
+
+    </div>
+
+
+    <div class="searchable-item"
+         data-search="Maskandi rhythm blues soul featured genre music">
+<img src="Images/image13.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+        <h3>Maskandi</h3>
+
+      
+    </div>
+
+
+    <div class="searchable-item"
+         data-search="Mbaqanga rhythm blues soul featured genre music">
+<img src="Images/image16.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+        <h3>Mbaqanga</h3>
+
+       
+
+    </div>
+
+
+     <div class="searchable-item"
+         data-search="Bublegum rhythm blues soul featured genre music">
+<img src="Images/Bubblegum.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+        <h3>Bubblegum</h3>
+
+       
+
+    </div>
+
+</section>
+
+
+
+<section class="international-artists">
+
+    <h2>Featured International Artists</h2>
+
+    <!-- ADELE -->
+    <div class="searchable-item"
+         data-search="Adele international artist pop soul">
+
+        <img src="Images/Adele.jpg"
+             alt="Adele album"
+             width="300"
+             height="250">
+             <br>
+ <p>
+                        Explore music from the internationally acclaimed singer .
+        </p>
+        <h3>Adele</h3>
+
+      
+
+    </div>
+
+
+    <!-- EMINEM -->
+    <div class="searchable-item"
+         data-search="Eminem Slim Shady international artist hip hop rap">
+
+        <img src="Images/SlimShady.jpg"
+             alt="Eminem Slim Shady album"
+             width="300"
+             height="250">
+             <br>
+ <p>
+            Discover classic hip-hop and rap music.
+        </p>
+
+        <h3>Eminem</h3>
+
+       
+    </div>
+
+
+    <!-- LUTHER VANDROSS -->
+    <div class="searchable-item"
+         data-search="Luther Vandross international artist R&B soul">
+
+        <img src="Images/Vandross.jpg"
+             alt="Luther Vandross album"
+             width="300"
+             height="250">
+             <br>
+  <p>
+            Enjoy timeless R&B and soul music.
+        </p>
+        <h3>Luther Vandross</h3>
+
+      
+
+    </div>
+
+
+    <!-- WHITNEY HOUSTON -->
+    <div class="searchable-item"
+         data-search="Whitney Houston international artist pop R&B soul">
+
+        <img src="Images/WhitneyHouston.jpg"
+             alt="Whitney Houston album"
+             width="300"
+             height="250">
+
+             <br>
+ <p>
+            Discover unforgettable music.
+        </p>
+        <h3>Whitney Houston</h3>
+
+       
+
+    </div>
+
+
+    <!-- KENDRICK LAMAR -->
+    <div class="searchable-item"
+         data-search="Kendrick Lamar Kdot international artist hip hop rap">
+
+        <img src="Images/kdot.jpg"
+             alt="Kendrick Lamar album"
+             width="300"
+             height="250">
+             <br>
+
+        <p>
+            Explore the best of hip-hop music.
+        </p>
+        <h3>Kendrick Lamar</h3>
+
+
+    </div>
+
+
+    <!-- MICHAEL JACKSON -->
+    <div class="searchable-item"
+         data-search="Michael Jackson international artist pop R&B">
+
+        <img src="Images/jackson.jpg"
+             alt="Michael Jackson album"
+             width="300"
+             height="250">
+             <br>
+ <p>
+            Explore legendary pop and R&B music.
+        </p>
+        <h3>Michael Jackson</h3>
+
+       
+
+    </div>
+
+
+    <!-- THE WEEKND -->
+    <div class="searchable-item"
+         data-search="The Weeknd international artist pop R&B">
+
+        <img src="Images/weekend.jpg"
+             alt="The Weeknd album"
+             width="300"
+             height="250">
+             <br>
+ <p>
+            Discover contemporary pop and R&B music.
+        </p>
+        <h3>The Weeknd</h3>
+
+       
+
+    </div>
+
+</section>
+
+
+<!--   EVENTS-->
+
+<section class="events">
+
+    <h2>
+
+    Upcoming Events
+
+</h2>
+
+ 
+<br>
+        <p>
+            Join fellow music lovers for an evening of great records and conversation.
+        </p>
+<h3>Vinyl Listening Session</h3>
+
+    <div class="searchable-item"
+         data-search="vinyl listening event music records">
+<img src="Images/Event1.jpeg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+<img src="Images/Event3.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+       
+
+    </div>
+
+
+    <div class="searchable-item"
+         data-search="music event live performance vinyl">
+
+
+
+<h3>Live Music Event</h3>
+       
+<img src="Images/Event 2.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+<img src="Images/event4.jpeg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
+
+
+    </div>
+ 
+</section>
+
+<section class="upcoming-releases">
+
+    
+
+
+    <div class="searchable-item"
+         data-search="upcoming release new music album">
+
+        <h3>New Music Releases</h3>
+
+        <p>
+            Stay tuned for exciting new additions to The Vinyl Stoep collection.
+        </p>
+
+    </div>
+
+
+    <div class="searchable-item"
+         data-search="new vinyl upcoming release records">
+
+       
+    </div>
+
+</section>
+
+
+ 
 <img src="Images/Cole.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
  <img src="Images/keys.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
  <img src="Images/Heyes.jpg" alt="The Vinyl Stoep Logo" width="300" height="250"> 
@@ -159,11 +346,22 @@ Welcome...
 
  <a href="About.html">Learn More About Us</a>
 </p>
+<button
+    id="topButton"
+    onclick="scrollToTop()"
+    style="display: none;"
+>
+    Back to Top
+</button>
 </main>
 
 
 <footer>&copy;ST10521273|#DISD0601|All Rights Reserved</footer>
 
+
+  
+</button>
+<script src="JS/Script.js"></script>
 </body>
->>>>>>> ef62f4891b4a6f77d5ba9ca592c2dd4c8afc76ea
 </html>
+
