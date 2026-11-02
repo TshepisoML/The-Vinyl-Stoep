@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inquiry | The Vinyl Stoep</title>
+
+    <link rel="stylesheet" href="CSS/StylingCSS.css">
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Initialise EmailJS -->
+    <script>
+        emailjs.init({
+            publicKey: "0Jc-bp2zPm8pzC557"
+        });
+    </script>
+
+    <!-- Website JavaScript -->
+    <script src="JavaScript/script.js" defer></script>
+
+</head>
+
+
+<body>
+
+<header>
+    <!-- Navigation bar -->
+    <nav>
+        <img src="images/image1.png.png" alt="The Vinyl Stoep Logo">
+
+        <ul>
+            <li><a href="index.html">Home |</a></li>
+            <li><a href="About.html">About Us |</a></li>
+            <li><a href="ContactUs.html">Contact Us |</a></li>
+            <li><a href="FrequentlyAskQuestions.html">Frequently Asked Questions |</a></li>
+            <li><a href="Gallery.html">Gallery |</a></li>
+            <li><a href="ProductDetails.html">Product Details |</a></li>
+            <li><a href="Inquiry.html">Inquiry</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Make an Inquiry</h2>
+
+    <p>
+        Looking for a specific record or have a question about our products
+        and services? Fill in the form below and The Vinyl Stoep team will
+        get back to you.
+    </p>
+
+    <!-- Inquiry Form -->
+    <form id="inquiryForm">
+
+        <label for="name">Full Name:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Enter your full name">
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <br>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        <br><br>
+
+        <label for="inquiryType">What is your inquiry about?</label>
+        <br>
+        <select id="inquiryType" name="inquiryType">
+            <option value="">Select an option</option>
+            <option value="record">Looking for a specific record</option>
+            <option value="product">Product information</option>
+            <option value="order">Orders and delivery</option>
+            <option value="trade">Selling or trading records</option>
+            <option value="general">General inquiry</option>
+        </select>
+        <br><br>
+
+        <label for="artist">Artist or Album Name:</label>
+        <br>
+        <input type="text" id="artist" name="artist" placeholder="Optional">
+        <br><br>
+
+        <label for="message">Your Message:</label>
+        <br>
+        <textarea id="message" name="message" rows="7"
+            placeholder="Tell us how we can help you"></textarea>
+        <br><br>
+
+       <button type="submit" id="submitButton">
+    Submit Inquiry
+</button>
+
+    </form>
+
+   
+    <p id="formMessage"></p>
+<script src="JS/Script.js"></script>
+
+<button
+    id="topButton"
+    onclick="scrollToTop()"
+    style="display: none;"
+>
+    Back to Top
+</button>
+</main>
+
+<footer>
+    &copy; ST10521273 | #DISD0601 | All Rights Reserved
+</footer>
+
